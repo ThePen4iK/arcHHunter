@@ -1,0 +1,15 @@
+.logo{
+  font-family: "Akzidenz-Grotesk Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  &__header{
+    color: #212121;
+  }
+}

@@ -1,0 +1,44 @@
+.circle {
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  margin: 30px 0 40px auto;
+
+  @media(min-width: 768px){
+    width: 165px;
+    height: 165px;
+    margin: 0;
+  }
+  &--red {
+    background: #D40C21;
+  }
+
+  &__text {
+    font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-33deg);
+
+    @media(min-width: 768px){
+      font-size: 16px;
+      line-height: 20px;
+    }
+    &--white {
+      color: #ffffff;
+    }
+  }
+}

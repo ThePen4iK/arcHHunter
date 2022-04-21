@@ -1,0 +1,73 @@
+.decoration{
+
+  &__list{
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 280px;
+    @media(min-width: 768px){
+      max-width: 723px;
+      margin-left: auto;
+      margin-right: 24px;
+    }
+    @media(min-width: 1200px){
+      margin-right: 42px;
+    }
+  }
+
+  &__item{
+    font-family: "Akzidenz-Grotesk Pro Ext", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212121;
+    text-transform: uppercase;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+
+    @media(min-width: 768px){
+      max-width: 723px;
+    }
+  }
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 280px;
+
+  }
+  &__text{
+    font-family: "Akzidenz-Grotesk Pro Ext", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212121;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+  }
+  &__img{
+
+    margin: 0 10px;
+    @media(min-width: 768px){
+      margin: 0 20px;
+    }
+    &--mod{
+      margin-left: 0;
+    }
+  }
+}

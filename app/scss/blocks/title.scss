@@ -1,0 +1,17 @@
+.title {
+  font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+  @media(min-width: 768px) {
+    font-size: 32px;
+    line-height: 41px;
+  }
+  @media(min-width: 1200px){
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
