@@ -2190,6 +2190,12 @@ img {
           transform: translate(-50%, -50%) rotate(4.8deg);
   z-index: -1;
 }
+@media (min-width: 768px) {
+  .team__slide.swiper-slide-active:before {
+    width: 371px;
+    height: 643px;
+  }
+}
 .team__slide.swiper-slide-active .team__img img {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
