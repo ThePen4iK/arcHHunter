@@ -31,17 +31,21 @@ body {
   }
 }
 
-.main{
+.main {
   overflow: hidden;
   flex: 1 0 auto;
-
 }
+
 *,
 *::before,
 *::after {
   font: inherit;
 
   box-sizing: border-box;
+}
+
+.picture {
+  display: block;
 }
 
 img {
@@ -55,7 +59,7 @@ img {
   overflow-y: hidden
 }
 
-.overlay{
+.overlay {
   opacity: 0;
   visibility: hidden;
 
@@ -67,8 +71,46 @@ img {
   background-color: rgba(15, 58, 76, 0.7);
   z-index: 18;
   transition: 0.3s all;
+
   &.active-overlay {
     opacity: 1;
     visibility: visible;
   }
+}
+
+.cursor {
+  display: none;
+  width: 140px;
+  height: 140px;
+  border: 1px solid #4F4F4F;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  @media(min-width: 1200px){
+    display: block;
+  }
+  &:before {
+    content: 'Drag';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-33deg);
+
+
+    font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212121;
+
+    text-transform: uppercase;
+  }
+
 }

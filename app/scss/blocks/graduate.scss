@@ -1,9 +1,12 @@
-.how {
+.graduate {
   padding: 0 10px;
+  @media(min-width: 768px){
+    padding: 0 20px;
+  }
   &__container{
     padding: 100px 0;
     @media(min-width: 768px){
-      padding: 200px 0 ;
+      padding: 200px 0;
     }
   }
   &__title {
@@ -18,21 +21,27 @@
     color: #212121;
 
     width: 100%;
-    max-width: 435px;
+
     @media(min-width: 768px){
+      font-size: 32px;
+      line-height: 41px;
+      max-width: 399px;
+    }
+    @media(min-width: 1200px){
       font-size: 36px;
       line-height: 46px;
+      max-width: 435px;
     }
   }
 
   &__wrapper {
     margin-bottom: 40px;
     @media(min-width: 768px){
-      margin-bottom: 70px;
+      margin-bottom: 58px;
 
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: flex-start;
     }
   }
 
@@ -53,11 +62,14 @@
       grid-template-columns: 135px 1fr;
     }
     @media(min-width: 768px){
-      max-width: 765px;
+      max-width: 726px;
       margin-left: auto;
       padding-top: 80px;
       padding-bottom: 85px;
       gap: 25px 30px;
+    }
+    @media(min-width: 1200px){
+      max-width: 765px;
     }
     &:last-child{
       border-bottom: 1px solid #c4c4c4;

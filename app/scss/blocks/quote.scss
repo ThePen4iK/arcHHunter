@@ -1,0 +1,75 @@
+.quote {
+  background: #C4C4C4;
+  padding: 0 10px;
+  @media(min-width: 768px){
+    padding: 0 20px;
+  }
+  &__container {
+    border: none;
+
+    &:before {
+      @media(min-width: 1200px) {
+        z-index: 1;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding: 50px 10px;
+
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    @media(min-width: 768px) {
+      padding: 100px 20px;
+      max-width: 727px;
+    }
+    @media(min-width: 1200px) {
+      max-width: 731px;
+      margin: 0 32px 0 auto;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212121;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+    width: 100%;
+    @media(min-width: 768px) {
+      font-size: 32px;
+      line-height: 41px;
+      margin-bottom: 50px;
+      max-width: 546px;
+    }
+    @media(min-width: 1200px) {
+      font-size: 36px;
+      line-height: 46px;
+      margin-bottom: 40px;
+      max-width: 641px;
+    }
+  }
+
+  &__name {
+    font-family: "Akzidenz-Grotesk Pro Ext", sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: #212121;
+    text-transform: uppercase;
+    @media(min-width: 768px) {
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+}

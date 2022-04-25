@@ -1,0 +1,128 @@
+.team {
+  padding: 0 10px;
+  @media(min-width: 768px) {
+    padding: 0 20px;
+  }
+
+  &__container {
+
+    padding: 100px 0 0;
+    @media(min-width: 768px){
+      padding: 200px 0 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @media(min-width: 768px) {
+      margin-bottom: 100px;
+    }
+  }
+  &__swiper{
+    overflow: hidden;
+  }
+  &__slide {
+    flex: 0 0 300px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+    @media(min-width: 768px){
+      flex: 0 0 360px;
+    }
+    &.swiper-slide-active {
+      &:before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 263px;
+        height: 456px;
+        background: #C4C4C4;
+        transition: all 0.5s ease-in-out;
+        transform: translate(-50%, -50%) rotate(4.8deg);
+        z-index: -1;
+      }
+      & .team__img img{
+        filter: grayscale(0);
+        transition: all 0.5s ease-in-out;
+      }
+      & .team__info {
+        opacity: 1;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    @media(any-hover: hover){
+      &:hover{
+        & .team__img img{
+          filter: grayscale(0);
+          transition: all 0.5s ease-in-out;
+        }
+        & .team__info {
+          opacity: 1;
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    & img {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+
+      height: 384px;
+      object-fit: cover;
+
+      transition: all 0.5s ease-in-out;
+      filter: grayscale(1);
+      @media(min-width: 768px){
+        height: 540px;
+      }
+    }
+  }
+
+  &__info {
+    padding: 15px;
+    background: #212121;
+    opacity: 0;
+    width: 255px;
+    margin: 0 auto;
+    transition: all 0.5s ease-in-out;
+    @media(min-width: 768px){
+      width: 100%;
+      padding: 20px;
+    }
+  }
+
+  &__name {
+    font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    @media(min-width: 768px){
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__prof {
+    font-family: "Akzidenz-Grotesk Pro";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #ffffff;
+    @media(min-width: 768px){
+      font-size: 18px;
+      line-height: 23px;
+    }
+  }
+}

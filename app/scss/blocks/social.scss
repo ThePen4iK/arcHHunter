@@ -1,0 +1,16 @@
+.social{
+  &__list{
+    display: flex;
+    list-style: none;
+  }
+  &__item{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+  }
+}
