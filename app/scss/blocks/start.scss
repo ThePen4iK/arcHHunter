@@ -14,25 +14,7 @@
   @media(min-width: 992px){
     min-height: 100vh;
   }
-  //padding-top: 120px;
-  //padding-bottom: 41px;
-  //@media(min-width: 375px){
-  //  padding-bottom: 115px;
-  //}
-  //@media(min-width: 576px){
-  //  padding-bottom: 92px;
-  //}
-  //@media(min-width: 768px) {
-  //  padding-top: 220px;
-  //  padding-bottom: 25px;
-  //}
-  //@media(min-width: 992px){
-  //  padding-bottom: 193px;
-  //}
-  //@media(min-width: 1440px){
-  //  padding-bottom: 185px;
-  //
-  //}
+
   &__bg img{
     position: absolute;
     top: 0;
@@ -43,11 +25,6 @@
     object-fit: cover;
 
   }
-
-  //&__img {
-  //  width: 100%;
-  //  height: auto;
-  //}
 
   &__container {
     border: none;

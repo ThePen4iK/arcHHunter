@@ -1,0 +1,49 @@
+.about{
+  padding: 0 10px;
+  @media(min-width: 768px){
+    padding: 0 20px;
+  }
+  &__container{
+    padding: 100px 0;
+    @media(min-width: 768px){
+      padding: 200px 0;
+    }
+  }
+  &__title{
+    width: 100%;
+    max-width: 149px;
+    margin-bottom: 50px;
+    @media(min-width: 768px){
+      max-width: 233px;
+      margin-bottom: 100px;
+    }
+    @media(min-width: 1200px){
+      max-width: 434px;
+    }
+  }
+  &__content{
+    width: 100%;
+    max-width: 727px;
+    @media(min-width: 768px){
+      margin-left: auto;
+    }
+    @media(min-width: 1200px){
+      max-width: 765px;
+    }
+  }
+  &__text{
+    font-family: "Akzidenz-Grotesk Pro", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212121;
+    &:not(:last-child){
+      margin-bottom: 10px;
+      @media(min-width: 1200px){
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

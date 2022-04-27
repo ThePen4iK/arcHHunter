@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.png" type="image/png"/>
+    <title>404</title>
+</head>
+<body>
+
+<section class="fatal">
+
+    <div class="fatal__bg">
+        <picture class="picture">
+            <source
+                    media="(min-width: 1200px)"
+                    srcset="../img/fatal-bg-desck.jpg, ../img/fatal-bg-desck@2x.jpg 1.25x"
+            />
+            <source
+                    media="(min-width: 576px)"
+                    srcset="../img/fatal-bg-tablet.jpg, ../img/fatal-bg-tablet@2x.jpg 1.25x"
+            />
+            <img class="fatal__img" src="../img/fatal-bg.jpg" alt="fatal">
+        </picture>
+    </div>
+    <div class="container fatal__container">
+        <p class="fatal__404">404</p>
+        <p class="fatal__info">Page not found</p>
+        <p class="fatal__text">We’re sorry, the page you requested could not be found.
+            Please go back to the homepage.</p>
+
+        <a href="index.html" class="circle circle--black circle--fatal">
+            <p class="circle__text circle__text--white">
+                Go
+                Home
+            </p>
+        </a>
+    </div>
+</section>
+
+</body>
+</html>

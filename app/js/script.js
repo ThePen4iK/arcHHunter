@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let swiperComment = new Swiper(".comment__swiper", {
+
         slidesPerView: "auto",
         spaceBetween: 5,
         navigation: {
@@ -115,6 +116,43 @@ document.addEventListener("DOMContentLoaded", function () {
         //     }
         // }
     });
+
+    let swiperGallery = new Swiper(".gallery__swiper",{
+        // spaceBetween: 10,
+        // watchSlidesProgress: true,
+        //
+        //
+        // slidesPerView: 'auto',
+        // pagination: {
+        //     el: ".swiper-pagination",
+        // },
+        // breakpoints: {
+        //     768: {
+        //         spaceBetween: 21,
+        //         slidesPerView: 3,
+        //         centeredSlidesBounds: true,
+        //     },
+        //     1200:{
+        //         spaceBetween: 25
+        //     }
+        //
+        // }
+        spaceBetween: 10,
+        // loop:true,
+        slidesPerView: 'auto',
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        watchSlidesProgress: true,
+        breakpoints: {
+            768: {
+                spaceBetween: 45,
+                centeredSlides: true,
+                centeredSlidesBounds: true,
+            },
+
+        }
+    })
 
     let mouseCursor = document.querySelector(".cursor");
     let sliderSlide = document.querySelectorAll(".work__slide");

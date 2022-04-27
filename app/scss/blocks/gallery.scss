@@ -1,0 +1,123 @@
+.gallery {
+  padding: 0 10px;
+  @media(min-width: 768px) {
+    padding: 0 20px;
+  }
+
+  &__container {
+    padding-bottom: 100px;
+    @media(min-width: 768px) {
+      padding-bottom: 200px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    @media(min-width: 768px) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    filter: grayscale(1);
+
+  }
+
+  &__swiper {
+    overflow: hidden;
+    @media(min-width: 1520px){
+      width: 1600px;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+
+  &__slide {
+    flex: 0 0 300px;
+    transition: all 0.5s ease-in-out;
+    @media(min-width: 768px){
+      flex: 0 0 418px;
+      height: 418px;
+      & .gallery__img{
+        height: 418px;
+      }
+    }
+    @media(any-hover: hover){
+      &:hover{
+        & .gallery__img{
+          filter: grayscale(0);
+          transition: all 0.5s ease-in-out;
+        }
+      }
+    }
+    &.swiper-slide-active {
+      transition: all 0.5s ease-in-out;
+      @media(min-width: 768px) {
+        flex: 0 0 476px;
+        height: 605px;
+      }
+      @media(min-width: 1200px){
+        flex: 0 0 575px;
+        height: 730px;
+      }
+
+      & .gallery__img {
+        filter: grayscale(0);
+        @media(min-width: 768px) {
+          height: 605px;
+        }
+        @media(min-width: 1200px){
+          height: 730px;
+        }
+      }
+
+
+    }
+
+    &.swiper-slide-next {
+      @media(min-width: 768px) {
+        flex: 0 0 377px;
+        height: 530px;
+        transition: all 0.5s ease-in-out;
+
+        & .gallery__img {
+          height: 530px;
+        }
+      }
+      @media(min-width: 1200px){
+        flex: 0 0 455px;
+        height: 640px;
+
+        & .gallery__img{
+          height: 640px;
+        }
+      }
+
+    }
+    &.swiper-slide-prev {
+      @media(min-width: 768px) {
+        flex: 0 0 319px;
+        height: 414px;
+        transition: all 0.5s ease-in-out;
+
+        & .work__img {
+          height: 414px;
+        }
+      }
+      @media(min-width: 1200px){
+        flex: 0 0 385px;
+        height: 500px;
+
+        & .gallery__img{
+          height: 500px;
+        }
+      }
+
+    }
+  }
+
+}

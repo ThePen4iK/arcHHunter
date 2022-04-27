@@ -39,7 +39,6 @@
 
   &__img {
     margin-bottom: 25px;
-    transition: 1s;
     object-fit: cover;
     width: 100%;
     filter: grayscale(1);
@@ -187,5 +186,6 @@
         display: none;
       }
     }
+
   }
 }
