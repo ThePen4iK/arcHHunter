@@ -11,19 +11,27 @@
     }
   }
   &__wrapper{
-
+    width: 100%;
+    max-width: 727px;
+    @media(min-width: 768px){
+      margin-left: auto;
+    }
+    @media(min-width: 1200px){
+      max-width: 765px;
+    }
+    &--portfolio{
+      @media(min-width: 1200px){
+        max-width: 798px;
+        margin-right: 97px;
+      }
+    }
     &-input{
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      width: 100%;
-      max-width: 727px;
-      @media(min-width: 768px){
-        margin-left: auto;
-      }
-      @media(min-width: 1200px){
-        max-width: 765px;
-      }
+
+
+
     }
   }
   &__title {
@@ -33,6 +41,14 @@
     @media(min-width: 768px) {
       margin-bottom: 100px;
       max-width: 398px;
+    }
+    &--portfolio{
+     @media(min-width: 768px){
+       max-width: 233px;
+     }
+      @media(min-width: 1200px){
+        max-width: 285px;
+      }
     }
   }
 

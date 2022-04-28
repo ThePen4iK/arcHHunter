@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 100%;
 
   max-width: 1200px;
@@ -10,7 +10,8 @@
   border-left: 1px solid #F1F1F1;
   border-right: 1px solid #F1F1F1;
   position: relative;
-  &:before{
+
+  &:before {
     content: '';
     width: 1px;
     height: 100%;
@@ -19,16 +20,41 @@
     top: 0;
     left: 50%;
     background: #F1F1F1;
-    @media(min-width: 768px){
+    @media(min-width: 768px) {
       left: calc(100% - 726px);
     }
-    @media(min-width: 1200px){
+    @media(min-width: 1200px) {
       left: calc(100% - 765px);
     }
   }
 
-  &--portfolio{
-    &:after{
+  &--portfolio {
+    &:before {
+      @media(min-width: 1200px) {
+        left: calc(100% - 894px);
+      }
+    }
+
+    &:after {
+      content: '';
+      width: 1px;
+      height: 100%;
+      position: absolute;
+      z-index: -5;
+      top: 0;
+      left: 0;
+      background: #F1F1F1;
+      @media(min-width: 768px) {
+      left: calc(100% - 346px);
+      }
+      @media(min-width: 1200px){
+        left: calc(100% - 445px);
+      }
+    }
+  }
+
+  &--project {
+    &:after {
       content: '';
       width: 1px;
       height: 100%;
@@ -37,14 +63,15 @@
       top: 0;
       left: 50%;
       background: #F1F1F1;
-      @media(min-width: 768px){
+      @media(min-width: 768px) {
         left: calc(100% - 560px);
       }
-      @media(min-width: 1200px){
+      @media(min-width: 1200px) {
         left: calc(100% - 598px);
       }
     }
   }
+
 
   //@media(min-width: 768px){
   //  padding: 0 20px;

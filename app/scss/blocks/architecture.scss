@@ -1,0 +1,120 @@
+.architecture {
+  padding: 0px 10px;
+  @media(min-width: 768px) {
+    padding: 0 20px;
+  }
+
+  &__wrapper {
+    @media(min-width: 768px) {
+      display: flex;
+    }
+  }
+
+  &__left {
+    @media(min-width: 768px) {
+      width: 100%;
+      max-width: 232px;
+    }
+    @media(min-width: 1200px) {
+      max-width: 304px;
+    }
+  }
+
+  &__right {
+
+    //max-width: 727px;
+
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    padding-right: 20px;
+
+    &--open {
+      .architecture__arrow {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    @media(min-width: 768px) {
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4F4F4F;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media(min-width: 768px) {
+      color: #C4C4C4;
+    }
+
+    &--active {
+      @media(min-width: 768px) {
+        transition: all 0.5s ease-in-out;
+        color: #212121;
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    @media(min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &-sub {
+    &__list {
+      display: none;
+      list-style: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background: #FFFFFF;
+      padding: 30px;
+      box-shadow: 0px 2px 20px 1px rgba(17, 17, 17, 0.15);
+      border-radius: 3px;
+
+      &--open {
+        display: block;
+      }
+
+      @media(min-width: 768px) {
+        display: block;
+        position: static;
+
+        background: transparent;
+        box-shadow: none;
+        border-radius: unset;
+
+        padding: 0;
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // }
     });
 
-    let swiperGallery = new Swiper(".gallery__swiper",{
+    let swiperGallery = new Swiper(".gallery__swiper", {
         // spaceBetween: 10,
         // watchSlidesProgress: true,
         //
@@ -177,34 +177,59 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    // let marquee = document.querySelectorAll('.marquee__item');
+    //
+    //
+    //
+    //
+    //
+    // addEventListener("load", function () {
+    //     marquee.forEach(el => {
+    //         let rate = 0;
+    //         let distance = el.clientWidth;
+    //         let style = window.getComputedStyle(el);
+    //         let marginRight = parseInt(style.marginRight) || 0;
+    //         let totalDistance = distance + marginRight;
+    //         let time = totalDistance / rate;
+    //         let container = el.parentElement;
+    //         gsap.to(container, time, {
+    //             repeat: -1,
+    //             x: '-'+totalDistance,
+    //             ease: Linear.easeNone,
+    //         });
+    //     });
+    // });
+    let architectureItem = document.querySelector(".architecture__item");
+    let architectureSubList = document.querySelector(".architecture-sub__list");
+    let architectureSubItem = document.querySelectorAll(".architecture-sub__item");
 
-
-
-
-    let marquee = document.querySelectorAll('.marquee__item');
-
-
-
-
-
-    addEventListener("load", function () {
-        marquee.forEach(el => {
-            let rate = 0;
-            let distance = el.clientWidth;
-            let style = window.getComputedStyle(el);
-            let marginRight = parseInt(style.marginRight) || 0;
-            let totalDistance = distance + marginRight;
-            let time = totalDistance / rate;
-            let container = el.parentElement;
-            gsap.to(container, time, {
-                repeat: -1,
-                x: '-'+totalDistance,
-                ease: Linear.easeNone,
-            });
-        });
-    });
-
-
+    if (architectureItem) {
+        architectureItem.addEventListener("click", (e) => {
+            if (!architectureItem.classList.contains("architecture__item--open")) {
+                architectureItem.classList.add("architecture__item--open");
+                architectureSubList.classList.add("architecture-sub__list--open");
+            } else {
+                architectureItem.classList.remove("architecture__item--open");
+                architectureSubList.classList.remove("architecture-sub__list--open");
+            }
+        })
+    }
+    if (architectureSubItem) {
+        architectureSubItem.forEach((item) => {
+            item.addEventListener("click", () => {
+                architectureItem.classList.remove("architecture__item--open");
+                architectureSubList.classList.remove("architecture-sub__list--open");
+            })
+        })
+    }
+    window.addEventListener("click", (e) => {
+        let target = e.target;
+        console.log(target)
+        if (target.classList.contains("architecture-sub__list") ) {
+            architectureItem.classList.remove("architecture__item--open");
+            architectureSubList.classList.remove("architecture-sub__list--open");
+        }
+    })
     console.log("DOM fully loaded and parsed");
 })
 document.addEventListener("DOMContentLoaded",(function(){console.log("DOM fully loaded and parsed")}));

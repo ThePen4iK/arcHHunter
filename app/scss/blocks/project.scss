@@ -1,0 +1,35 @@
+.project{
+  padding: 120px 10px 0;
+  @media(min-width: 768px) {
+    padding: 220px 20px 0;
+  }
+  &__title{
+    font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 51px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #212121;
+    width: 100%;
+    max-width: 300px;
+    margin: 0;
+    @media(min-width: 768px){
+      max-width: 570px;
+      font-size: 80px;
+      line-height: 102px;
+    }
+    @media(min-width: 1200px){
+      max-width: fit-content;
+    }
+  }
+  &__start img{
+    width: 100%;
+    object-fit: cover;
+    border-top: 1px solid #C4C4C4;
+    padding-top: 25px;
+    @media(min-width: 768px){
+      padding-top: 70px;
+    }
+  }
+}
