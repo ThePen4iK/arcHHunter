@@ -2818,6 +2818,14 @@ img {
     row-gap: 100px;
   }
 }
+.portfolio__list:not(:last-child) {
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .portfolio__list:not(:last-child) {
+    margin-bottom: 100px;
+  }
+}
 .portfolio__item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -3043,6 +3051,9 @@ img {
   }
 }
 .architecture__link {
+  border: none;
+  outline: none;
+  background: transparent;
   display: inline-block;
   font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
   font-size: 16px;
@@ -3096,6 +3107,7 @@ img {
   -webkit-box-shadow: 0px 2px 20px 1px rgba(17, 17, 17, 0.15);
           box-shadow: 0px 2px 20px 1px rgba(17, 17, 17, 0.15);
   border-radius: 3px;
+  z-index: 1;
 }
 .architecture-sub__list--open {
   display: block;
@@ -3113,6 +3125,10 @@ img {
 }
 .architecture-sub__item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.hide {
+  display: none;
 }
 
 .project {

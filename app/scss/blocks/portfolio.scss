@@ -54,6 +54,12 @@
       grid-template-columns: repeat(12, 1fr);
       row-gap: 100px;
     }
+    &:not(:last-child){
+      margin-bottom: 50px;
+      @media(min-width: 768px){
+        margin-bottom: 100px;
+      }
+    }
   }
 
   &__item {

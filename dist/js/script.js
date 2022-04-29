@@ -118,25 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let swiperGallery = new Swiper(".gallery__swiper", {
-        // spaceBetween: 10,
-        // watchSlidesProgress: true,
-        //
-        //
-        // slidesPerView: 'auto',
-        // pagination: {
-        //     el: ".swiper-pagination",
-        // },
-        // breakpoints: {
-        //     768: {
-        //         spaceBetween: 21,
-        //         slidesPerView: 3,
-        //         centeredSlidesBounds: true,
-        //     },
-        //     1200:{
-        //         spaceBetween: 25
-        //     }
-        //
-        // }
+
         spaceBetween: 10,
         // loop:true,
         slidesPerView: 'auto',
@@ -224,12 +206,87 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener("click", (e) => {
         let target = e.target;
-        console.log(target)
-        if (target.classList.contains("architecture-sub__list") ) {
+        if (target.classList.contains("architecture-sub__list")) {
             architectureItem.classList.remove("architecture__item--open");
             architectureSubList.classList.remove("architecture-sub__list--open");
         }
-    })
+    });
+
+
+    function app() {
+        const buttons = document.querySelectorAll(".architecture__link");
+        const contents = document.querySelectorAll(".portfolio__list");
+        const portfolioCategory = document.querySelector(".js-navigation-list");
+
+
+
+        function filter(category, items) {
+            items.forEach((item) => {
+                const isItemFiltered = !item.classList.contains(category);
+                const isShowAll = category.toLowerCase() === 'all'
+                if (isItemFiltered && !isShowAll) {
+                    item.classList.add("hide")
+                } else {
+                    item.classList.remove("hide");
+                }
+            })
+        }
+
+        buttons.forEach((item, i) => {
+
+
+            item.addEventListener('click', (e) => {
+                const currentCategory = item.dataset.filter;
+                filter(currentCategory, contents)
+            })
+
+            portfolioCategory.addEventListener("click",(e)=>{
+                const allCategory = document.querySelectorAll(".architecture__link")
+                const target = e.target;
+                allCategory.forEach((item)=>{
+                    item.classList.remove('architecture__link--active')
+                })
+                target.classList.add('architecture__link--active')
+            })
+        })
+    }
+
+    app()
+
+    // let tabsParrent = document.querySelector(".js-tabs");
+    // let tabs = document.querySelectorAll(".js-tabs-toggle");
+    // let tabsContent = document.querySelectorAll(".js-tabs-content");
+    //
+    // function hideTabContent() {
+    //     tabsContent.forEach((item) => {
+    //         item.style.display = "none";
+    //     });
+    //
+    //     tabs.forEach((item) => {
+    //         item.classList.remove("architecture__link--active");
+    //     });
+    // }
+    //
+    // function showTabContent(i = 0) {
+    //     tabsContent[i].style.display = "block";
+    //     tabs[i].classList.add("architecture__link--active");
+    // }
+    //
+    // hideTabContent();
+    // showTabContent();
+    //
+    // tabsParrent.addEventListener("click", (e) => {
+    //     const target = e.target;
+    //     if (target && target.classList.contains("js-tabs-toggle")) {
+    //         tabs.forEach((item, i) => {
+    //             if (target == item) {
+    //                 hideTabContent();
+    //                 showTabContent(i);
+    //             }
+    //         });
+    //     }
+    // });
+
     console.log("DOM fully loaded and parsed");
 })
 document.addEventListener("DOMContentLoaded",(function(){console.log("DOM fully loaded and parsed")}));

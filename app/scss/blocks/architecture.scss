@@ -48,6 +48,10 @@
   }
 
   &__link {
+    border: none;
+    outline: none;
+    background: transparent;
+
     display: inline-block;
     font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
     font-size: 16px;
@@ -94,7 +98,7 @@
       padding: 30px;
       box-shadow: 0px 2px 20px 1px rgba(17, 17, 17, 0.15);
       border-radius: 3px;
-
+      z-index: 1;
       &--open {
         display: block;
       }
@@ -118,3 +122,19 @@
     }
   }
 }
+
+.hide{
+  display: none;
+}
+//.animation{
+//
+//}
+//
+//@keyframes hide {
+//  0%{
+//    visibility: hidden;
+//  }
+//  100%{
+//
+//  }
+//}
