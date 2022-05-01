@@ -40,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let swiperWork = new Swiper(".work__swiper", {
         spaceBetween: 10,
-        // loop:true,
         slidesPerView: 'auto',
         pagination: {
             el: ".swiper-pagination",
@@ -68,10 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let swiperTeam = new Swiper(".team__swiper", {
         spaceBetween: 10,
-        // loop:true,
         slidesPerView: 'auto',
-        // centeredSlides: true,
-        // centeredSlidesBounds: true,
         pagination: {
             el: ".swiper-pagination",
         },
@@ -81,40 +77,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
 
         },
-        // on: {
-        //     beforeTransitionStart: (e) => {
-        //
-        //         // Put in variable activeSlide the real active slide
-        //         let activeSlide;
-        //         let slides = e.slides;
-        //         slides.forEach(item => {
-        //             if (item.classList.contains("swiper-slide-active")) {
-        //                 activeSlide = item;
-        //             }
-        //         });
-        //
-        //         // Find out dataset of the slide
-        //         let activeSlideYear = activeSlide.dataset.slide;
-        //
-        //         let stamps = document.querySelectorAll(".history__stamp");
-        //         stamps = Array.from(stamps);
-        //
-        //         // Put in variable targetStamp the real target stamp
-        //         let targetStamp;
-        //         stamps.forEach(item => {
-        //             if (item.dataset.target == activeSlideYear) {
-        //                 targetStamp = item;
-        //             }
-        //         });
-        //
-        //         // Find out index of the target stamp
-        //         let targetStampIndex = stamps.indexOf(targetStamp);
-        //
-        //         if (targetStampIndex > 0) {
-        //             historyTimeline.slideTo(targetStampIndex);
-        //         }
-        //     }
-        // }
     });
 
     let swiperGallery = new Swiper(".gallery__swiper", {
