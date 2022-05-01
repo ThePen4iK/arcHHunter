@@ -137,7 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     let mouseCursor = document.querySelector(".cursor");
-    let sliderSlide = document.querySelectorAll(".work__slide");
+    let sliderSlide = document.querySelectorAll(".js-slide");
+
     let bodyCursor = document.querySelector(".cursor-custom");
     let allLink = document.querySelectorAll("a");
     let initCursor = false;
