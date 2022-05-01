@@ -138,49 +138,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let mouseCursor = document.querySelector(".cursor");
     let sliderSlide = document.querySelectorAll(".work__slide");
+    let bodyCursor = document.querySelector(".cursor-custom");
+    let allLink = document.querySelectorAll("a");
+    let initCursor = false;
 
+    for (let i = 0; i < allLink.length; i++) {
+        let selfLink = allLink[i];
 
-    sliderSlide.forEach((item) => {
-        item.addEventListener("mouseover", cursor)
-    })
+        selfLink.addEventListener("mouseover", function() {
+            bodyCursor.classList.add("custom-cursor--link");
+        });
+        selfLink.addEventListener("mouseout", function() {
+            bodyCursor.classList.remove("custom-cursor--link");
+        });
+    }
+    for (let i=0; i<sliderSlide.length; i++){
+        let swiperSlide = sliderSlide[i];
 
-    // window.addEventListener("mousemove", cursor)
-
-    function cursor(e) {
-        mouseCursor.style.top = e.pageY + "px";
-        mouseCursor.style.left = e.pageX + "px";
+        swiperSlide.addEventListener("mouseover", function (){
+            bodyCursor.classList.remove("cursor-custom");
+            bodyCursor.classList.add("cursor-slider");
+        })
+        swiperSlide.addEventListener("mouseout", function (){
+            bodyCursor.classList.remove("cursor-slider");
+            bodyCursor.classList.add("cursor-custom");
+        })
     }
 
-    const moveCursor = (e) => {
-        const mouseY = e.clientY;
-        const mouseX = e.clientX;
+    window.onmousemove = function(e) {
+        let mouseX = e.clientX;
+        let mouseY = e.clientY;
 
-        mouseCursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
-    }
+        if (!initCursor) {
+            // cursor.style.opacity = 1;
+            TweenLite.to(bodyCursor, 0.3, {
+                opacity: 1
+            });
+            initCursor = true;
+        }
+
+        TweenLite.to(bodyCursor, 0, {
+            top: mouseY + "px",
+            left: mouseX + "px"
+        });
+    };
+
+    window.onmouseout = function(e) {
+        TweenLite.to(bodyCursor, 0.3, {
+            opacity: 0
+        });
+        initCursor = false;
+    };
 
 
-    // let marquee = document.querySelectorAll('.marquee__item');
-    //
-    //
-    //
-    //
-    //
-    // addEventListener("load", function () {
-    //     marquee.forEach(el => {
-    //         let rate = 0;
-    //         let distance = el.clientWidth;
-    //         let style = window.getComputedStyle(el);
-    //         let marginRight = parseInt(style.marginRight) || 0;
-    //         let totalDistance = distance + marginRight;
-    //         let time = totalDistance / rate;
-    //         let container = el.parentElement;
-    //         gsap.to(container, time, {
-    //             repeat: -1,
-    //             x: '-'+totalDistance,
-    //             ease: Linear.easeNone,
-    //         });
-    //     });
-    // });
+
     let architectureItem = document.querySelector(".architecture__item");
     let architectureSubList = document.querySelector(".architecture-sub__list");
     let architectureSubItem = document.querySelectorAll(".architecture-sub__item");
@@ -253,39 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     app()
 
-    // let tabsParrent = document.querySelector(".js-tabs");
-    // let tabs = document.querySelectorAll(".js-tabs-toggle");
-    // let tabsContent = document.querySelectorAll(".js-tabs-content");
-    //
-    // function hideTabContent() {
-    //     tabsContent.forEach((item) => {
-    //         item.style.display = "none";
-    //     });
-    //
-    //     tabs.forEach((item) => {
-    //         item.classList.remove("architecture__link--active");
-    //     });
-    // }
-    //
-    // function showTabContent(i = 0) {
-    //     tabsContent[i].style.display = "block";
-    //     tabs[i].classList.add("architecture__link--active");
-    // }
-    //
-    // hideTabContent();
-    // showTabContent();
-    //
-    // tabsParrent.addEventListener("click", (e) => {
-    //     const target = e.target;
-    //     if (target && target.classList.contains("js-tabs-toggle")) {
-    //         tabs.forEach((item, i) => {
-    //             if (target == item) {
-    //                 hideTabContent();
-    //                 showTabContent(i);
-    //             }
-    //         });
-    //     }
-    // });
+
 
     console.log("DOM fully loaded and parsed");
 })

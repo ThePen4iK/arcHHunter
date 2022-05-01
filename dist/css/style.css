@@ -56,6 +56,7 @@ html {
 * {
   margin: 0;
   padding: 0;
+  cursor: none;
 }
 
 body {
@@ -396,6 +397,7 @@ body {
   font-size: 16px;
   line-height: 100%;
   color: #212121;
+  background: #FFFFFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,26 +457,59 @@ img {
   visibility: visible;
 }
 
-.cursor {
+.cursor-custom {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  -o-transition: transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
+  -webkit-transform: translate(-50%, -50%) scale(0.3);
+      -ms-transform: translate(-50%, -50%) scale(0.3);
+          transform: translate(-50%, -50%) scale(0.3);
+  z-index: 1000;
+}
+
+.custom-cursor--link {
+  -webkit-transform: translate(-50%, -50%) scale(0.5);
+      -ms-transform: translate(-50%, -50%) scale(0.5);
+          transform: translate(-50%, -50%) scale(0.5);
+}
+
+.cursor-slider {
   display: none;
   width: 140px;
   height: 140px;
   border: 1px solid #4F4F4F;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
-  position: absolute;
-  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: -webkit-transform 350ms ease;
+  transition: -webkit-transform 350ms ease;
+  -o-transition: transform 350ms ease;
+  transition: transform 350ms ease;
+  transition: transform 350ms ease, -webkit-transform 350ms ease;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   pointer-events: none;
 }
 @media (min-width: 1200px) {
-  .cursor {
+  .cursor-slider {
     display: block;
   }
 }
-.cursor:before {
+.cursor-slider:before {
   content: "Drag";
   position: absolute;
   top: 50%;
@@ -923,11 +958,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media (any-hover: hover) {
-  .burger:hover {
-    cursor: pointer;
-  }
 }
 @media (any-hover: hover) and (min-width: 768px) {
   .burger {
@@ -2124,7 +2154,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
 }
 .comment__prev.swiper-button-disabled {
   color: #C4C4C4;
@@ -2141,7 +2170,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
 }
 .comment__next.swiper-button-disabled {
   color: #C4C4C4;
@@ -2951,7 +2979,6 @@ img {
   -o-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
   text-transform: uppercase;
-  cursor: pointer;
 }
 @media (min-width: 768px) {
   .portfolio__more {
@@ -3067,7 +3094,6 @@ img {
   transition: all 0.5s ease-in-out;
   text-decoration: none;
   text-transform: uppercase;
-  cursor: pointer;
 }
 @media (min-width: 768px) {
   .architecture__link {
@@ -3089,7 +3115,6 @@ img {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  cursor: pointer;
 }
 @media (min-width: 768px) {
   .architecture__arrow {

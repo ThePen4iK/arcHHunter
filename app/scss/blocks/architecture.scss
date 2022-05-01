@@ -63,7 +63,7 @@
     transition: all 0.5s ease-in-out;
     text-decoration: none;
     text-transform: uppercase;
-    cursor: pointer;
+
     @media(min-width: 768px) {
       color: #C4C4C4;
     }
@@ -81,7 +81,7 @@
     top: 50%;
     right: 0px;
     transform: translateY(-50%);
-    cursor: pointer;
+
     @media(min-width: 768px) {
       display: none;
     }
@@ -126,15 +126,3 @@
 .hide{
   display: none;
 }
-//.animation{
-//
-//}
-//
-//@keyframes hide {
-//  0%{
-//    visibility: hidden;
-//  }
-//  100%{
-//
-//  }
-//}
