@@ -1522,7 +1522,6 @@ img {
   height: 120px;
   border-radius: 50%;
   position: relative;
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
