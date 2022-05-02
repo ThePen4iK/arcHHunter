@@ -458,6 +458,7 @@ img {
 }
 
 .cursor-custom {
+  display: none;
   position: fixed;
   opacity: 0;
   pointer-events: none;
@@ -476,11 +477,22 @@ img {
           transform: translate(-50%, -50%) scale(0.3);
   z-index: 1000;
 }
+@media (min-width: 1200px) {
+  .cursor-custom {
+    display: block;
+  }
+}
 
 .custom-cursor--link {
+  display: none;
   -webkit-transform: translate(-50%, -50%) scale(0.5);
       -ms-transform: translate(-50%, -50%) scale(0.5);
           transform: translate(-50%, -50%) scale(0.5);
+}
+@media (min-width: 1200px) {
+  .custom-cursor--link {
+    display: block;
+  }
 }
 
 .cursor-slider {
