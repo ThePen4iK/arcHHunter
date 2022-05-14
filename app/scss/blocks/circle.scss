@@ -34,7 +34,13 @@
   &--black {
     background: #212121;
   }
-
+  &--popup{
+    margin-top: 30px;
+    margin-left: auto;
+    @media(min-width: 768px){
+      margin-top: 50px;
+    }
+  }
   &__text {
     font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
     font-size: 12px;
@@ -64,13 +70,17 @@
       width: 100%;
       max-width: 99px;
     }
+    &--popup{
+      width: 100%;
+      max-width: 117px;
+    }
   }
   &--mod{
     margin-top: 45px;
     margin-left: auto;
   }
-
   &--fatal{
     margin-left: auto;
   }
+
 }

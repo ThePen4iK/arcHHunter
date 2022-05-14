@@ -106,27 +106,27 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = 0; i < allLink.length; i++) {
         let selfLink = allLink[i];
 
-        selfLink.addEventListener("mouseover", function() {
+        selfLink.addEventListener("mouseover", function () {
             bodyCursor.classList.add("custom-cursor--link");
         });
-        selfLink.addEventListener("mouseout", function() {
+        selfLink.addEventListener("mouseout", function () {
             bodyCursor.classList.remove("custom-cursor--link");
         });
     }
-    for (let i=0; i<sliderSlide.length; i++){
+    for (let i = 0; i < sliderSlide.length; i++) {
         let swiperSlide = sliderSlide[i];
 
-        swiperSlide.addEventListener("mouseover", function (){
+        swiperSlide.addEventListener("mouseover", function () {
             bodyCursor.classList.remove("cursor-custom");
             bodyCursor.classList.add("cursor-slider");
         })
-        swiperSlide.addEventListener("mouseout", function (){
+        swiperSlide.addEventListener("mouseout", function () {
             bodyCursor.classList.remove("cursor-slider");
             bodyCursor.classList.add("cursor-custom");
         })
     }
 
-    window.onmousemove = function(e) {
+    window.onmousemove = function (e) {
         let mouseX = e.clientX;
         let mouseY = e.clientY;
 
@@ -144,13 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     };
 
-    window.onmouseout = function(e) {
+    window.onmouseout = function (e) {
         TweenLite.to(bodyCursor, 0.3, {
             opacity: 0
         });
         initCursor = false;
     };
-
 
 
     let architectureItem = document.querySelector(".architecture__item");
@@ -191,7 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const portfolioCategory = document.querySelector(".js-navigation-list");
 
 
-
         function filter(category, items) {
             items.forEach((item) => {
                 const isItemFiltered = !item.classList.contains(category);
@@ -212,10 +210,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 filter(currentCategory, contents)
             })
 
-            portfolioCategory.addEventListener("click",(e)=>{
+            portfolioCategory.addEventListener("click", (e) => {
                 const allCategory = document.querySelectorAll(".architecture__link")
                 const target = e.target;
-                allCategory.forEach((item)=>{
+                allCategory.forEach((item) => {
                     item.classList.remove('architecture__link--active')
                 })
                 target.classList.add('architecture__link--active')
@@ -225,7 +223,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     app()
 
+    let btnPopup = document.querySelector(".js-btn-popup");
+    let overlay = document.querySelector(".overlay");
+    let popup = document.querySelector(".popup--thank");
+    let popupClose = document.querySelectorAll(".popup__close");
+    btnPopup.addEventListener("click", (e) => {
+        e.preventDefault();
+        rootElement.classList.add("block");
+        popup.classList.add("popup__show");
+        overlay.classList.add("active-overlay");
 
+        popupClose.forEach((item) => {
+            item.addEventListener("click", () => {
+                popup.classList.remove("popup__show");
+                overlay.classList.remove("active-overlay");
+                rootElement.classList.remove("block");
+            })
+        })
+    })
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
 
+        if (key == 27) {
+            popup.classList.remove("popup__show");
+            overlay.classList.remove("active-overlay");
+            rootElement.classList.remove("block");
+        }
+        ;
+    }, false);
+    window.addEventListener("click", (e) => {
+        let target = e.target;
+        if (target.classList.contains("active-overlay")) {
+            popup.classList.remove("popup__show");
+            overlay.classList.remove("active-overlay");
+            rootElement.classList.remove("block");
+        }
+    })
     console.log("DOM fully loaded and parsed");
 })

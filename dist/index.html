@@ -685,7 +685,7 @@
                     <input type="text" id="email" class="form__input" placeholder="Email">
                 </div>
             </div>
-            <button class="circle circle--black circle--mod">
+            <button class="circle circle--black circle--mod js-btn-popup">
                 <p class="circle__text circle__text--white circle__text--mod">
                     Join now
                 </p>
@@ -745,6 +745,329 @@
                 </li>
             </ul>
         </address>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="popup popup--thank ">
+        <div class="popup__container popup__container--thank">
+            <svg class="popup__close" width="17" height="17">
+                <use xlink:href="../img/sprite.svg#popup-close"></use>
+            </svg>
+
+            <h1 class="popup__title popup__title--first">thank you for your application!</h1>
+
+            <p class="popup__text">We want to know more about your project, so we invite you to take a short test</p>
+
+            <button class="circle circle--red circle--popup">
+                <p class="circle__text circle__text--white circle__text--popup">
+                    Start test
+                </p>
+            </button>
+        </div>
+    </div>
+    <div class="popup ">
+        <div class="popup__container popup__container--steps">
+            <svg class="popup__close" width="17" height="17">
+                <use xlink:href="../img/sprite.svg#popup-close"></use>
+            </svg>
+
+            <div class="popup__wrapper popup__wrapper--mod"><!-- popup__wrapper--mod  для больших модалок с шага 4-->
+
+                <div class="popup__left">
+                    <!--          Шаг 1-->
+<!--                    <span class="popup__steps">-->
+<!--                    Step 1/5-->
+<!--                    </span>-->
+                    <!--          Шаг 2-->
+<!--                    <span class="popup__steps">-->
+<!--                    Step 2/5-->
+<!--                    </span>-->
+<!--                              Шаг 3-->
+<!--                    <span class="popup__steps">-->
+<!--                    Step 3/5-->
+<!--                    </span>-->
+                    <!--                              Шаг 3-->
+                    <span class="popup__steps">
+                    Step 4/5
+                    </span>
+                    <div class="popup__header">
+
+                        <!--          Шаг 1-->
+<!--                        <h1 class="popup__title popup__title&#45;&#45;steps">How would you like to work with an architect?</h1>-->
+                        <!--          Шаг 2-->
+<!--                     кнопка сделать шаг назад-->
+<!--                        <button class="popup__back" >-->
+<!--                            <svg class="popup__arrow" >-->
+<!--                                <use xlink:href="../img/sprite.svg#popup-back"></use>-->
+<!--                            </svg>-->
+<!--                        </button>-->
+<!--                        <h1 class="popup__title popup__title&#45;&#45;steps">What is your preffered method of payment?</h1>-->
+                        <!--          Шаг 3-->
+<!--                        <button class="popup__back" >-->
+<!--                            <svg class="popup__arrow" width="28" height="18">-->
+<!--                                <use xlink:href="../img/sprite.svg#popup-back"></use>-->
+<!--                            </svg>-->
+<!--                        </button>-->
+<!--                        <h1 class="popup__title popup__title&#45;&#45;steps">Who are you looking for?</h1>-->
+                        <!--          Шаг 4 если выбирают-->
+                        <button class="popup__back" >
+                            <svg class="popup__arrow" width="28" height="18">
+                                <use xlink:href="../img/sprite.svg#popup-back"></use>
+                            </svg>
+                        </button>
+                        <h1 class="popup__title popup__title--steps">What task are you looking for?</h1>
+
+                    </div>
+                    <ul class="popup__list popup__list--mod">
+                        <!--    Шаг 1 -->
+<!--                                                <li class="popup__item">-->
+<!--                                                    <div class="popup__wrap">-->
+<!--                                                        <svg class="popup__icon" fill="none">-->
+<!--                                                            <use xlink:href="../img/sprite.svg#graduate-1"></use>-->
+<!--                                                        </svg>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="popup__item-text">-->
+<!--                                                        Directly with an architect-->
+<!--                                                    </p>-->
+<!--                                                </li>-->
+
+<!--                                                <li class="popup__item">-->
+<!--                                                    <div class="popup__wrap">-->
+<!--                                                        <svg class="popup__icon" fill="none">-->
+<!--                                                            <use xlink:href="../img/sprite.svg#graduate-2"></use>-->
+<!--                                                        </svg>-->
+<!--                                                    </div>-->
+<!--                                                    <p class="popup__item-text">-->
+<!--                                                        Work with a project manager-->
+<!--                                                    </p>-->
+<!--                                                </li>-->
+                        <!--    Шаг 2 -->
+<!--                        <li class="popup__item">-->
+<!--                            <div class="popup__wrap">-->
+<!--                                <svg class="popup__icon" fill="none">-->
+<!--                                    <use xlink:href="../img/sprite.svg#popup-step2-1"></use>-->
+<!--                                </svg>-->
+<!--                            </div>-->
+<!--                            <p class="popup__item-text">-->
+<!--                                hourly payment-->
+<!--                            </p>-->
+<!--                        </li>-->
+<!--                        <li class="popup__item">-->
+<!--                            <div class="popup__wrap">-->
+<!--                                <svg class="popup__icon" fill="none">-->
+<!--                                    <use xlink:href="../img/sprite.svg#popup-step2-2"></use>-->
+<!--                                </svg>-->
+<!--                            </div>-->
+<!--                            <p class="popup__item-text">-->
+<!--                                fixed payment-->
+<!--                            </p>-->
+<!--                        </li>-->
+<!--                        <li class="popup__item">-->
+<!--                            <div class="popup__wrap">-->
+<!--                                <svg class="popup__icon" fill="none">-->
+<!--                                    <use xlink:href="../img/sprite.svg#popup-step2-3"></use>-->
+<!--                                </svg>-->
+<!--                            </div>-->
+<!--                            <p class="popup__item-text">-->
+<!--                                hire a specialist-->
+<!--                            </p>-->
+<!--                        </li>-->
+                        <!--    Шаг 3 -->
+<!--                        <li class="popup__item">-->
+<!--                            <div class="popup__wrap">-->
+<!--                                <img src="../img/popup-step3-1.jpg" alt="step3">-->
+<!--                            </div>-->
+<!--                            <p class="popup__item-text">-->
+<!--                                Architect-->
+<!--                            </p>-->
+<!--                        </li>-->
+<!--                        <li class="popup__item">-->
+<!--                            <div class="popup__wrap">-->
+<!--                                <img src="../img/popup-step3-2.jpg" alt="step3">-->
+<!--                            </div>-->
+<!--                            <p class="popup__item-text">-->
+<!--                                Interior Designer-->
+<!--                            </p>-->
+<!--                        </li>-->
+
+                        <!--    Шаг 4 -->
+                        <li class="popup__item">
+                            <div class="popup__wrap">
+                                <img src="../img/popup-step4-1.jpg" alt="step4">
+                            </div>
+                            <p class="popup__item-text">
+                                Drafting
+                                service
+                            </p>
+                            <p class="popup__item-about">3Ds Max, Sketchup, Revit, AutoCad, Rhino</p>
+                        </li>
+                        <li class="popup__item">
+                            <div class="popup__wrap">
+                                <img src="../img/popup-step4-2.jpg" alt="step4">
+                            </div>
+                            <p class="popup__item-text">
+                                Architectural Visualisation
+                            </p>
+                            <p class="popup__item-about">Lumion, V-Ray, 3Ds Max, Sketchup, Corona, Rhino</p>
+
+                        </li>
+                        <li class="popup__item">
+                            <div class="popup__wrap">
+                                <img src="../img/popup-step4-3.jpg" alt="step4">
+                            </div>
+                            <p class="popup__item-text">
+                                Architectural Visualisation
+                            </p>
+                            <p class="popup__item-about">InDesign, V-Ray, 3Ds Max, Sketchup, AutoCad</p>
+
+                        </li>
+                        <li class="popup__item">
+                            <div class="popup__wrap">
+                                <img src="../img/popup-step4-4.jpg" alt="step4">
+                            </div>
+                            <p class="popup__item-text">
+                                Architectural Visualisation
+                            </p>
+                            <p class="popup__item-about">Parametric models, Environmental analysis, Digital fabrication</p>
+
+                        </li>
+                    </ul>
+                </div>
+                <div class="popup__right">
+                    <span class="popup__choise">
+                        your choise
+                    </span>
+
+                    <ul class="popup-choise__list popup-choise__list--mod"><!-- popup-choise__list--mod от 4 этапа(шага) -->
+                        <!-- Шаг 1-->
+<!--                                                <li class="popup-choise__item">-->
+<!--                                                    <h3 class="popup-choise__title">step 1</h3>-->
+<!--                                                    <p class="popup-choise__text">How would you like to work with an architect?</p>-->
+<!--                                                </li>-->
+
+                        <!-- Шаг 2-->
+<!--                        <li class="popup-choise__item">-->
+<!--                            <h3 class="popup-choise__title">step 1</h3>-->
+<!--                            <p class="popup-choise__text">How would you like to work with an architect?</p>-->
+<!--                            &lt;!&ndash;Ответ&ndash;&gt;-->
+<!--                            <p class="popup-choise__answer">Directly with an architect</p>-->
+<!--                        </li>-->
+
+<!--                        <li class="popup-choise__item">-->
+<!--                            <h3 class="popup-choise__title">step 2</h3>-->
+<!--                            <p class="popup-choise__text">What is your preffered method of payment?</p>-->
+<!--                        </li>-->
+                        <!-- Шаг 3-->
+<!--                        <li class="popup-choise__item">-->
+<!--                            <h3 class="popup-choise__title">step 1</h3>-->
+<!--                            <p class="popup-choise__text">How would you like to work with an architect?</p>-->
+<!--                            &lt;!&ndash;Ответ&ndash;&gt;-->
+<!--                            <p class="popup-choise__answer">Directly with an architect</p>-->
+<!--                        </li>-->
+
+<!--                        <li class="popup-choise__item">-->
+<!--                            <h3 class="popup-choise__title">step 2</h3>-->
+<!--                            <p class="popup-choise__text">What is your preffered method of payment?</p>-->
+<!--                            &lt;!&ndash;Ответ&ndash;&gt;-->
+<!--                            <p class="popup-choise__answer">hourly payment</p>-->
+<!--                        </li>-->
+
+<!--                        <li class="popup-choise__item">-->
+<!--                            <h3 class="popup-choise__title">step 3</h3>-->
+<!--                            <p class="popup-choise__text">Who are you looking for?</p>-->
+<!--                        </li>-->
+
+                        <!-- Шаг 4-->
+                        <li class="popup-choise__item">
+                            <h3 class="popup-choise__title">step 1</h3>
+                            <p class="popup-choise__text">How would you like to work with an architect?</p>
+                            <!--Ответ-->
+                            <p class="popup-choise__answer">Directly with an architect</p>
+                        </li>
+
+                        <li class="popup-choise__item">
+                            <h3 class="popup-choise__title">step 2</h3>
+                            <p class="popup-choise__text">What is your preffered method of payment?</p>
+                            <!--Ответ-->
+                            <p class="popup-choise__answer">hourly payment</p>
+                        </li>
+
+                        <li class="popup-choise__item">
+                            <h3 class="popup-choise__title">step 3</h3>
+                            <p class="popup-choise__text">Who are you looking for?</p>
+                            <!--Ответ-->
+                            <p class="popup-choise__answer">Interior Designer</p>
+                        </li>
+
+                        <li class="popup-choise__item">
+                            <h3 class="popup-choise__title">step 4</h3>
+                            <p class="popup-choise__text">What task are you looking for?</p>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup--finish">
+        <div class="popup__container popup__container--finish">
+            <svg class="popup__close" width="17" height="17">
+                <use xlink:href="../img/sprite.svg#popup-close"></use>
+            </svg>
+
+            <h1 class="popup__title popup__title--finish">thank you for your responses!</h1>
+            <h2 class="popup__subtitle">Requests have been processed. </h2>
+
+            <h3 class="popup__options">your choise:</h3>
+            <ul class="popup-finish__list">
+                <li class="popup-finish__item">
+                    <h3 class="popup-choise__title">step 1</h3>
+                    <p class="popup-choise__text">How would you like to work with an architect?</p>
+                    <!--Ответ-->
+                    <p class="popup-choise__answer">Directly with an architect</p>
+                </li>
+
+                <li class="popup-finish__item">
+                    <h3 class="popup-choise__title">step 2</h3>
+                    <p class="popup-choise__text">What is your preffered method of payment?</p>
+                    <!--Ответ-->
+                    <p class="popup-choise__answer">hourly payment</p>
+                </li>
+
+                <li class="popup-finish__item">
+                    <h3 class="popup-choise__title">step 3</h3>
+                    <p class="popup-choise__text">How would you like to work with an architect?</p>
+                    <!--Ответ-->
+                    <p class="popup-choise__answer">Directly with an architect</p>
+                </li>
+
+                <li class="popup-finish__item">
+                    <h3 class="popup-choise__title">step 4</h3>
+                    <p class="popup-choise__text">What is your preffered method of payment?</p>
+                    <!--Ответ-->
+                    <p class="popup-choise__answer">hourly payment</p>
+                </li>
+
+
+                <li class="popup-finish__item">
+                    <h3 class="popup-choise__title">step 5</h3>
+                    <p class="popup-choise__text">How would you like to work with an architect?</p>
+                    <!--Ответ-->
+                    <p class="popup-choise__answer">Directly with an architect</p>
+                </li>
+            </ul>
+
+            <div class="popup__finish">
+                <a href="#" class="popup__again">TRY AGAIN</a>
+                <button class="circle circle--red">
+                    <p class="circle__text circle__text--white">
+                        Finish
+                    </p>
+                </button>
+            </div>
+        </div>
+    </div>
     </div>
 </footer>
   </body>
