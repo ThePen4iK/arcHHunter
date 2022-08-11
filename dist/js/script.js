@@ -227,38 +227,81 @@ document.addEventListener("DOMContentLoaded", function () {
     let overlay = document.querySelector(".overlay");
     let popup = document.querySelector(".popup--thank");
     let popupClose = document.querySelectorAll(".popup__close");
-    btnPopup.addEventListener("click", (e) => {
-        e.preventDefault();
-        rootElement.classList.add("block");
-        popup.classList.add("popup__show");
-        overlay.classList.add("active-overlay");
+    if(btnPopup){
+        btnPopup.addEventListener("click", (e) => {
+            e.preventDefault();
+            rootElement.classList.add("block");
+            popup.classList.add("popup__show");
+            overlay.classList.add("active-overlay");
 
-        popupClose.forEach((item) => {
-            item.addEventListener("click", () => {
-                popup.classList.remove("popup__show");
-                overlay.classList.remove("active-overlay");
-                rootElement.classList.remove("block");
+            popupClose.forEach((item) => {
+                item.addEventListener("click", () => {
+                    popup.classList.remove("popup__show");
+                    overlay.classList.remove("active-overlay");
+                    rootElement.classList.remove("block");
+                })
             })
         })
-    })
+    }
+
     document.body.addEventListener('keyup', function (e) {
         var key = e.keyCode;
 
         if (key == 27) {
             popup.classList.remove("popup__show");
+            popupSlide.classList.remove("popup__show");
+
             overlay.classList.remove("active-overlay");
             rootElement.classList.remove("block");
-        }
-        ;
+        };
     }, false);
     window.addEventListener("click", (e) => {
         let target = e.target;
         if (target.classList.contains("active-overlay")) {
             popup.classList.remove("popup__show");
+            popupSlide.classList.remove("popup__show");
+
             overlay.classList.remove("active-overlay");
             rootElement.classList.remove("block");
         }
     })
+
+
+
+    let projectsItem = document.querySelectorAll(".portfolio__item"),
+        popupSlide = document.querySelector(".popup--project");
+
+
+    window.activateProjectsPopup = (projects) => {
+        projects.forEach((item) => {
+            item.classList.add('popup-activated');
+            item.addEventListener("click", (e) => {
+                e.preventDefault();
+                const popupHeader = document.querySelector('.popup__project'),
+                    popupContent = document.querySelector(".popup__name"),
+                    popupTemplateImg = item.querySelector(".popup__template--img"),
+                    popupTemplateName = item.querySelector(".popup__template--name");
+                popupHeader.innerHTML = '';
+                popupContent.innerHTML = '';
+                popupHeader.appendChild(popupTemplateImg.content.cloneNode(true));
+                popupContent.appendChild(popupTemplateName.content.cloneNode(true));
+                popupSlide.classList.add("popup__show");
+                overlay.classList.add("active-overlay");
+                rootElement.classList.add("block");
+            })
+        });
+    };
+    if(popupClose){
+        popupClose.forEach((item) => {
+            item.addEventListener("click", () => {
+                popupSlide.classList.remove("popup__show");
+                overlay.classList.remove("active-overlay");
+                rootElement.classList.remove("block");
+            })
+        })
+    }
+    window.activateProjectsPopup(projectsItem);
+
     console.log("DOM fully loaded and parsed");
 })
 document.addEventListener("DOMContentLoaded",(function(){console.log("DOM fully loaded and parsed")}));

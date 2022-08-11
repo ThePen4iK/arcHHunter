@@ -56,7 +56,6 @@ html {
 * {
   margin: 0;
   padding: 0;
-  cursor: none;
 }
 
 body {
@@ -455,88 +454,6 @@ img {
 .overlay.active-overlay {
   opacity: 1;
   visibility: visible;
-}
-
-.cursor-custom {
-  display: none;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  mix-blend-mode: difference;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: white;
-  -webkit-transition: -webkit-transform 350ms ease;
-  transition: -webkit-transform 350ms ease;
-  -o-transition: transform 350ms ease;
-  transition: transform 350ms ease;
-  transition: transform 350ms ease, -webkit-transform 350ms ease;
-  -webkit-transform: translate(-50%, -50%) scale(0.3);
-      -ms-transform: translate(-50%, -50%) scale(0.3);
-          transform: translate(-50%, -50%) scale(0.3);
-  z-index: 1000;
-}
-@media (min-width: 1200px) {
-  .cursor-custom {
-    display: block;
-  }
-}
-
-.custom-cursor--link {
-  display: none;
-  -webkit-transform: translate(-50%, -50%) scale(0.5);
-      -ms-transform: translate(-50%, -50%) scale(0.5);
-          transform: translate(-50%, -50%) scale(0.5);
-}
-@media (min-width: 1200px) {
-  .custom-cursor--link {
-    display: block;
-  }
-}
-
-.cursor-slider {
-  display: none;
-  width: 140px;
-  height: 140px;
-  border: 1px solid #4F4F4F;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  -webkit-transition: -webkit-transform 350ms ease;
-  transition: -webkit-transform 350ms ease;
-  -o-transition: transform 350ms ease;
-  transition: transform 350ms ease;
-  transition: transform 350ms ease, -webkit-transform 350ms ease;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-@media (min-width: 1200px) {
-  .cursor-slider {
-    display: block;
-  }
-}
-.cursor-slider:before {
-  content: "Drag";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(-33deg);
-      -ms-transform: translate(-50%, -50%) rotate(-33deg);
-          transform: translate(-50%, -50%) rotate(-33deg);
-  font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-  color: #212121;
-  text-transform: uppercase;
 }
 
 /* blocks start */
@@ -3564,6 +3481,7 @@ img {
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 10px;
+  visibility: hidden;
 }
 @media (min-width: 768px) {
   .popup {
@@ -3593,6 +3511,18 @@ img {
 .popup--finish {
   height: 95vh;
   overflow: scroll;
+}
+.popup--project {
+  max-width: 1240px;
+}
+.popup--project .container {
+  background: #FFFFFF;
+  padding: 40px 0 0;
+}
+@media (min-width: 768px) {
+  .popup--project .container {
+    padding-top: 70px;
+  }
 }
 .popup__container {
   background: #ffffff;
@@ -3660,6 +3590,16 @@ img {
     right: 37px;
   }
 }
+.popup__close--project {
+  top: 13px;
+  right: 12px;
+}
+@media (min-width: 1200px) {
+  .popup__close--project {
+    top: 27px;
+    right: 27px;
+  }
+}
 .popup__header {
   display: -ms-grid;
   display: grid;
@@ -3671,6 +3611,63 @@ img {
 @media (min-width: 768px) {
   .popup__header {
     margin-bottom: 50px;
+  }
+}
+.popup__project {
+  width: 100%;
+  height: 151px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .popup__project {
+    height: 484px;
+  }
+}
+@media (min-width: 1200px) {
+  .popup__project {
+    height: 606px;
+  }
+}
+.popup__project .portfolio__img {
+  display: block;
+  width: 100%;
+  height: 151px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .popup__project .portfolio__img {
+    height: 484px;
+  }
+}
+@media (min-width: 1200px) {
+  .popup__project .portfolio__img {
+    height: 606px;
+  }
+}
+.popup__name {
+  padding: 10px;
+}
+@media (min-width: 768px) {
+  .popup__name {
+    padding: 22px 23px;
+  }
+}
+.popup__name .portfolio__name {
+  font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  .popup__name .portfolio__name {
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 .popup__back {

@@ -11,7 +11,7 @@
   margin: 0 auto;
   padding: 0 10px;
 
-  //visibility: hidden;
+  visibility: hidden;
   @media(min-width: 768px) {
     padding: 0 20px;
   }
@@ -36,6 +36,17 @@
   &--finish {
     height: 95vh;
     overflow: scroll;
+  }
+  &--project{
+    max-width: 1240px;
+
+    .container{
+      background: #FFFFFF;
+      padding: 40px 0 0;
+      @media(min-width: 768px){
+        padding-top: 70px;
+      }
+    }
   }
 
   &__container {
@@ -95,7 +106,14 @@
       top: 38px;
       right: 37px;
     }
-
+    &--project{
+      top: 13px;
+      right: 12px;
+      @media(min-width: 1200px){
+        top: 27px;
+        right: 27px;
+      }
+    }
   }
 
   &__header {
@@ -107,7 +125,50 @@
       margin-bottom: 50px;
     }
   }
-
+  &__project{
+    width: 100%;
+    height: 151px;
+    overflow: hidden;
+    @media(min-width: 768px){
+      height: 484px;
+    }
+    @media(min-width: 1200px){
+      height: 606px;
+    }
+    .portfolio__img{
+      display: block;
+      width: 100%;
+      height: 151px;
+      object-fit: cover;
+      object-position: center;
+      @media(min-width: 768px){
+        height: 484px;
+      }
+      @media(min-width: 1200px){
+        height: 606px;
+      }
+    }
+  }
+  &__name{
+    padding: 10px;
+    @media(min-width: 768px){
+      padding: 22px 23px;
+    }
+    .portfolio__name{
+      //styleName: Заголовок 16;
+      font-family: "Akzidenz-Grotesk Pro-Md", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: 0em;
+      text-align: left;
+      text-transform: uppercase;
+      @media(min-width: 768px){
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
   &__back {
     border: none;
     outline: none;
